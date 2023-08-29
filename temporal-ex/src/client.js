@@ -29,14 +29,14 @@ async function connectAndStop(req, res) {
 }
 
 
-app.get("/start",(req,res)=>{
+app.get("/sendMail",(req,res)=>{
   run(req, res).catch((err) => {
     console.error(err);
     process.exit(1);
   });
 });
 
-app.get("/stop",(req, res)=>{
+app.get("/cancelMail",(req, res)=>{
   connectAndStop(req, res).catch((err) => {
     console.error(err);
     process.exit(1);
